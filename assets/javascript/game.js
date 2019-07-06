@@ -6,7 +6,6 @@ answer = wordList[Math.floor(Math.random() * Math.floor(wordList.length))].toLow
 answerArr = Array.from(answer);
 console.log(answer.toLocaleString());
 console.log("==========================");
-console.log(alphabetArr.toLocaleString());
 guesses = [];
 htmlArr = [];
 answerRemainder = answerArr.slice();
@@ -36,11 +35,6 @@ $(document).ready(function(){
     });
 });
 
-
-
-$("#myToast").on('show.bs.toast', function(){
-    console.log("testingSHOW");
-});
 // Captures keyboard input. Depending on the letter pressed it will "call" (execute) different functions.
 document.onkeyup = function (event) {
     // Captures the key press, converts it to lowercase, and saves it to a variable.
