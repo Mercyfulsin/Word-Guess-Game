@@ -80,12 +80,12 @@ function updateStats() {
     // hAnswer.innerHTML = answer;
     if(answerRemainder.length === 0){
         alphabetArr = [];
-        toastText[0].innerHTML = "You won!";
+        toastText[0].innerHTML = "You won!\nClosing this notification will refresh the page.";
         $('.toast').toast('show');
     }else if(remainder <= 0){
         console.log("test");
         alphabetArr = [];
-        toastText[0].innerHTML = "You lost!";
+        toastText[0].innerHTML = "You lost!\nClosing this notification will refresh the page.";
         $('.toast').toast('show');
     }
 }
