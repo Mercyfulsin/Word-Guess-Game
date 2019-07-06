@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Word Guess Game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+</head>
+
+<body>
+  <!-- Main Container -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card text-white bg-dark mb-3 mt-3">
+          <div class="card-header">
+            <h1>Word Guess Game</h1>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <h4>Guess the name of the Star Wars Character I'm thinking of</h4>
+            </h5>
+            <p class="card-text">
+              <!-- <div id="wins">Wins: 0</div>
+              <div id="losses">Losses: 0</div> -->
+              <div id="remainder">Guesses Left: 9</div>
+              <div id="guesses">Your guesses thus far: </div>
+              <!-- <div id="answer" hidden="true">Correct Answer: </div> -->
+
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <h4>Name to Guess: </h4>
+        <div id="wordArea">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <!-- Flexbox container for aligning the toasts -->
+    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center"
+      style="min-height: 200px;">
+
+      <!-- Then put toasts within -->
+      <div class="toast" role="alert" id="myToast" data-autohide="false" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="https://cdn3.iconfinder.com/data/icons/shortcuts/512/letter-m-key-keyboard-512.png"
+            class="rounded mr-2" width="50px" height="50px" alt="Testing">
+          <strong class="mr-auto">Notification</strong>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="toast-body">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="assets/javascript/game.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
