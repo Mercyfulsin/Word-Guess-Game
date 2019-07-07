@@ -84,6 +84,11 @@ function updateStats() {
     hGuesses.innerHTML = "Your guesses thus far: " + guesses.toLocaleString();
     // hAnswer.innerHTML = answer;
     if(answerRemainder.length === 0){
+        audioElement.pause();
+        audioElement.setAttribute("src", "assets/sounds/end_title.ogg");
+        audioElement.load();
+        audioElement.play();
+        console.log(audioElement.getAttribute("src"));
         alphabetArr = [];
         toastText[0].innerHTML = "You won!\nClosing this notification will refresh the page.";
         $('.toast').toast('show');
