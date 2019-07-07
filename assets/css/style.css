@@ -18,4 +18,9 @@ body{
 .toast-body,.toast-header{
     background-color: #444455;
     color: #ffe919;
+    width: 500px;
+}
+.toast{
+    height: 400px;
+    width: 600px;
 }

@@ -103,7 +103,9 @@ function updateStats() {
         audioElement.setAttribute("src", "assets/sounds/chosen_one.ogg");
         audioElement.load();
         audioElement.play();
-        toastText[0].innerHTML = "You lost!\nClosing this notification will refresh the page.";
+        var newImage = $("<img>").attr("src", "assets/images/chosen.gif")
+        newImage.appendTo(toastText[0]);
+        // toastText[0].innerHTML = "You lost!\nClosing this notification will refresh the page.";
         $('.toast').toast('show');
     }
 }
