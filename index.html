@@ -16,10 +16,10 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="card text-white bg-dark mb-3 mt-3">
+        <div class="card bg-dark mb-3 mt-3">
           <div class="card-header">
-            <img src="assets/images/sw.png" alt="Star Wars Logo" width="250px" height="200px" style="display: block; margin-left: auto; margin-right: auto;">
-            <h1>Word Guess Game</h1>
+            <button style="background: url('assets/images/sw.png'); background-size: cover; display: block; margin-left: auto; margin-right: auto; height: 200px; width: 300px;" id="sw-logo"></button>
+            <h1 style="text-align: center;">Word Guess Game</h1>
           </div>
           <div class="card-body">
             <h5 class="card-title">
@@ -51,7 +51,7 @@
     <!-- Toast -->
     <!-- Flexbox container for aligning the toasts -->
     <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center"
-      style="min-height: 200px;">
+      style="position:fixed; top: 50%; left:50%; transform:translate(-50%,-50%); min-height: 200px;">
 
       <!-- Then put toasts within -->
       <div class="toast" role="alert" id="myToast" data-autohide="false" aria-live="assertive" aria-atomic="true">
