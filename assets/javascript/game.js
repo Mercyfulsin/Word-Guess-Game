@@ -17,7 +17,7 @@ losses = 0;
 remainder = 9;
 audioElement = document.createElement("audio");
 audioElement.setAttribute("src", "assets/sounds/theme.ogg");
-
+audioElement.setAttribute("id", "songs");
 //HTML Variables
 var hWins, hLosses, hRemainder, hGuesses, hAnswer, hWordArea, hUnderscoreArea,toastText;
 // hWins = document.getElementById("wins");
@@ -35,9 +35,15 @@ $(document).ready(function(){
         window.location.reload();
     });
     $("#sw-logo").on("click", function(){
-        console.log("hello");
+        if($(this).attr("is-playing") === "false"){
         audioElement.play();
+        $(this).attr("is-playing","true");
+    }else{
+        audioElement.pause();
+        $(this).attr("is-playing","false");
+    }
     });
+    console.log(audioElement.getAttribute("src"));
 });
 
 // Captures keyboard input. Depending on the letter pressed it will "call" (execute) different functions.
@@ -81,7 +87,7 @@ function updateStats() {
         alphabetArr = [];
         toastText[0].innerHTML = "You won!\nClosing this notification will refresh the page.";
         $('.toast').toast('show');
-    }else if(remainder === 1){
+    }else if(remainder === 1 && audioElement.getAttribute("src") !== "assets/sounds/SW-Duel_Of_The_Fates.ogg"){
         audioElement.pause();
         audioElement.setAttribute("src", "assets/sounds/SW-Duel_Of_The_Fates.ogg");
         audioElement.load();
