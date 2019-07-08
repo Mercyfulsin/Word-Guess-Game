@@ -1,5 +1,5 @@
 //GLOBAL VARIABLES
-var guesses, wins, losses, remainder, wordList, answer, alphabetArr, htmlArr, answerRemainder, audioElement;
+var guesses, wins, losses, remainder, wordList, answer, alphabetArr, htmlArr, loseGifs, loseSounds,answerRemainder, audioElement;
 
 //Split string into array (Generating alphanumeric options)
 alphabetArr = ("abcdefghijklmnopqrstuvwxyz1234567890").split("");
@@ -13,6 +13,9 @@ console.log(answer.toLocaleString());
 //Initializing empty array to hold user guess attempts and array of html elements for displaying the game
 guesses = [];
 htmlArr = [];
+//Randomize losing gifs and sounds
+loseGifs = ["assets/images/boom.gif","assets/images/chosen.gif"];
+loseSounds = ["assets/sounds/blown_up.ogg","assets/sounds/chosen_one.ogg"]
 //Make a copy of answerArr using slice (using = in JS actually references same obj in memory)
 answerRemainder = answerArr.slice();
 //Remove any non alphanumeric characters in the name

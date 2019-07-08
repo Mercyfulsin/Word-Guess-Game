@@ -21,15 +21,17 @@ function updateStats() {
     if(answerRemainder.length === 0){
         playMusic("assets/sounds/end_title.ogg");
         alphabetArr = [];
-        toastText[0].innerHTML = "You won!\nClosing this notification will refresh the page.";
+        var newImage = $("<img>").attr("src", "assets/images/victory.gif");
+        newImage.appendTo(toastText[0]);
         $(".mr-auto").text('You Won!');
         $('.toast').toast('show');
     }else if(remainder === 1 && audioElement.getAttribute("src") !== "assets/sounds/SW-Duel_Of_The_Fates.ogg"){
         playMusic("assets/sounds/SW-Duel_Of_The_Fates.ogg");
     }else if(remainder <= 0){
         alphabetArr = [];
-        playMusic("assets/sounds/chosen_one.ogg");
-        var newImage = $("<img>").attr("src", "assets/images/chosen.gif")
+        var randomNum = Math.round(Math.random());
+        playMusic(loseSounds[randomNum]);
+        var newImage = $("<img>").attr("src", loseGifs[randomNum]);
         newImage.appendTo(toastText[0]);
         $(".mr-auto").text('You Lost!');
         $('.toast').toast('show');
@@ -37,6 +39,8 @@ function updateStats() {
 }
 
 function generateHTML() {
+    var randomNum = Math.round(Math.random());
+    console.log(randomNum);
     for (var i = 0; i < answerArr.length; i++) {
         //Create HTML elements
         //Block holds the letter and underscore
