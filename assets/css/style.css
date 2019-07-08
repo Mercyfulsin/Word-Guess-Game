@@ -18,9 +18,25 @@ body{
 .toast-body,.toast-header{
     background-color: #444455;
     color: #ffe919;
-    width: 500px;
+    /* width: 500px; */
+}
+.toast-header{
+    border-bottom-color: #ffe919;
 }
 .toast{
-    height: 400px;
-    width: 600px;
+    display: inline-block;
+    overflow: visible;
+    max-width: 475px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffe919;
+    
+}
+.card{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffe919;
+}
+button{
+    border-color: #ffe919;
 }
