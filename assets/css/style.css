@@ -35,6 +35,9 @@ body{
     border-style: solid;
     border-width: 1px;
     border-color: #ffe919;
+    background-image: url(../images/starry_space.jpg);
+    background-position: center center;
+    background-size: cover;
 }
 button{
     border-color: #ffe919;
