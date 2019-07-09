@@ -33,7 +33,7 @@ function updateStats() {
         playMusic(loseSounds[randomNum]);
         var newImage = $("<img>").attr("src", loseGifs[randomNum]);
         newImage.appendTo(toastText[0]);
-        $(".mr-auto").text('You Lost!');
+        $(".mr-auto").text('You Lost! Correct Answer: ' + answer);
         $('.toast').toast('show');
     }
 }
