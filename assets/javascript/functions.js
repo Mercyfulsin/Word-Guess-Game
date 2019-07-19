@@ -39,8 +39,6 @@ function updateStats() {
 }
 
 function generateHTML() {
-    var randomNum = Math.round(Math.random());
-    console.log(randomNum);
     for (var i = 0; i < answerArr.length; i++) {
         //Create HTML elements
         //Block holds the letter and underscore
