@@ -1,0 +1,3 @@
+<h1>Star Wars Hangman</h1>
+                    <p class="white-text">Dynamically generates almost all html properties through the use of jQuery.
+                    </p>

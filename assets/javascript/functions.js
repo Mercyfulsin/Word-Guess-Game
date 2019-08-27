@@ -3,7 +3,7 @@ function showCharacter(letter) {
     for (var i = 0; i < answerArr.length; i++) {
         if (answerArr[i] === letter) {
             var temp = htmlArr[i].childNodes;
-            temp[0].innerHTML = letter;
+            temp[0].textContent = letter;
         }
     }
     answerRemainder = answerRemainder.filter(function(content){
@@ -13,11 +13,11 @@ function showCharacter(letter) {
 
 
 function updateStats() {
-    // hWins.innerHTML = "Wins: " + this.wins;
-    // hLosses.innerHTML = "Losses: " + losses;
-    hRemainder.innerHTML = "Guesses Left: " + remainder;
-    hGuesses.innerHTML = "Your guesses thus far: " + guesses.toLocaleString();
-    // hAnswer.innerHTML = answer;
+    // hWins.textContent = "Wins: " + this.wins;
+    // hLosses.textContent = "Losses: " + losses;
+    hRemainder.textContent = "Guesses Left: " + remainder;
+    hGuesses.textContent = "Your guesses thus far: " + guesses.toLocaleString();
+    // hAnswer.textContent = answer;
     if(answerRemainder.length === 0){
         playMusic("assets/sounds/end_title.ogg");
         alphabetArr = [];
@@ -46,11 +46,11 @@ function generateHTML() {
         //underscore aesthetic
         var underscore = document.createElement('p');
         underscore.setAttribute("id", "underscore");
-        underscore.innerHTML = "_";
+        underscore.textContent = "_";
         //space for ... spaces in names
         var spacebar = document.createElement('p');
         spacebar.setAttribute("id", "spacebar");
-        spacebar.innerHTML = " ";
+        spacebar.textContent = " ";
         //stores the individual char
         var letterBox = document.createElement('span');
         letterBox.setAttribute("id", "letterbox");
